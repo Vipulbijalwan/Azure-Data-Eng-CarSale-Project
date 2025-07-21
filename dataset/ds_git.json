@@ -1,0 +1,30 @@
+{
+	"name": "ds_git",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "http_rawdata",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"load_flag": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "Vipulbijalwan/Azure-DE-Project-Resources/refs/heads/main/Raw%20Data/@{dataset().load_flag}",
+					"type": "Expression"
+				}
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
