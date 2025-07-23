@@ -1,6 +1,15 @@
 {
 	"name": "ds_sqlDB",
 	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"tanle_name": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [
@@ -56,7 +65,10 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "source_cars_data"
+			"table": {
+				"value": "@dataset().tanle_name",
+				"type": "Expression"
+			}
 		}
 	}
 }
