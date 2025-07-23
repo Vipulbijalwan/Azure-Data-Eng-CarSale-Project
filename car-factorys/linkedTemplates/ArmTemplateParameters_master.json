@@ -5,20 +5,26 @@
 		"factoryName": {
 			"value": "car-factorys"
 		},
-		"ls_sql_db_password": {
+		"AzureSqlDatabase1_password": {
 			"value": ""
 		},
-		"http_rawdata_properties_typeProperties_url": {
-			"value": "https://raw.githubusercontent.com"
+		"ls_datalake_accountKey": {
+			"value": ""
 		},
-		"ls_sql_db_properties_typeProperties_server": {
+		"AzureSqlDatabase1_properties_typeProperties_server": {
 			"value": "carservers.database.windows.net"
 		},
-		"ls_sql_db_properties_typeProperties_database": {
-			"value": "carsale"
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "cardb"
 		},
-		"ls_sql_db_properties_typeProperties_userName": {
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
 			"value": "adminvipul"
+		},
+		"http_rawdata_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/"
+		},
+		"ls_datalake_properties_typeProperties_url": {
+			"value": "https://carstoragelake.dfs.core.windows.net/"
 		},
 		"containerUri": {
 			"value": ""

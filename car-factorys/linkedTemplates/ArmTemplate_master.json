@@ -7,25 +7,33 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "car-factorys"
 		},
-		"ls_sql_db_password": {
+		"AzureSqlDatabase1_password": {
 			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'ls_sql_db'"
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase1'"
 		},
-		"http_rawdata_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://raw.githubusercontent.com"
+		"ls_datalake_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_datalake'"
 		},
-		"ls_sql_db_properties_typeProperties_server": {
+		"AzureSqlDatabase1_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "carservers.database.windows.net"
 		},
-		"ls_sql_db_properties_typeProperties_database": {
+		"AzureSqlDatabase1_properties_typeProperties_database": {
 			"type": "string",
-			"defaultValue": "carsale"
+			"defaultValue": "cardb"
 		},
-		"ls_sql_db_properties_typeProperties_userName": {
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "adminvipul"
+		},
+		"http_rawdata_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/"
+		},
+		"ls_datalake_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://carstoragelake.dfs.core.windows.net/"
 		},
 		"containerUri": {
 			"type": "string",
@@ -54,20 +62,26 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"ls_sql_db_password": {
-						"value": "[parameters('ls_sql_db_password')]"
+					"AzureSqlDatabase1_password": {
+						"value": "[parameters('AzureSqlDatabase1_password')]"
+					},
+					"ls_datalake_accountKey": {
+						"value": "[parameters('ls_datalake_accountKey')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_userName')]"
 					},
 					"http_rawdata_properties_typeProperties_url": {
 						"value": "[parameters('http_rawdata_properties_typeProperties_url')]"
 					},
-					"ls_sql_db_properties_typeProperties_server": {
-						"value": "[parameters('ls_sql_db_properties_typeProperties_server')]"
-					},
-					"ls_sql_db_properties_typeProperties_database": {
-						"value": "[parameters('ls_sql_db_properties_typeProperties_database')]"
-					},
-					"ls_sql_db_properties_typeProperties_userName": {
-						"value": "[parameters('ls_sql_db_properties_typeProperties_userName')]"
+					"ls_datalake_properties_typeProperties_url": {
+						"value": "[parameters('ls_datalake_properties_typeProperties_url')]"
 					}
 				}
 			},
